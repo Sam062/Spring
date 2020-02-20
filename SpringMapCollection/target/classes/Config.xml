@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+	<bean class="base.SpringBean" name="obj" p:id="101">
+
+		<!-- 1. Key and Value as Tag -->
+		<property name="map1">
+			<map>
+				<entry>
+					<key>
+						<value>A1</value>
+					</key>
+					<value>111</value>
+				</entry>
+
+				<entry>
+					<key>
+						<value>A2</value>
+					</key>
+					<value>222</value>
+				</entry>
+			</map>
+		</property>
+
+		<!-- 2. key and value as Attribute -->
+		<property name="map2">
+			<map>
+				<entry key="P1" value="1" />
+				<entry key="P2" value="2" />
+			</map>
+		</property>
+
+		<!-- 3. Key as Tag, Value as Attribute -->
+		<property name="map3">
+			<map>
+				<entry value="101">
+					<key>
+						<value>Key1</value>
+					</key>
+				</entry>
+				<entry value="102">
+					<key>
+						<value>Key2</value>
+					</key>
+				</entry>
+			</map>
+		</property>
+
+		<!-- 4. Key as Attribute, Value as Tag -->
+		<property name="map4">
+			<map>
+				<entry key="XXX">
+					<value>123</value>
+				</entry>
+				<entry key="YYY">
+					<value>321</value>
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+</beans>
